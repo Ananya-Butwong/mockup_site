@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- COOKIE BANNER SCRIPT START -->
-    <!-- Place your cookie banner script here during testing -->
+    <script src="https://cookiebanner.pdpanetka.com/nksAutoBlock.min.js"></script>
+    <script>
+        fetch("https://qacookies330.pdpanetka.com/api/cookie/cookiesetting?key=Mdd3cr0tCDfsUpfhJ9pRvA%3d%3d")
+            .then((res) => res.text())
+            .then((html) => {
+                var documentFragment = document.createRange().createContextualFragment(html);
+                document.body.appendChild(documentFragment);
+            })
+            .catch((err) => console.warn('API went wrong.', err));
+    </script>
     <!-- COOKIE BANNER SCRIPT END -->
 
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -36,7 +47,8 @@
         <section class="hero">
             <div class="container">
                 <h1>Data Privacy <br> Made Simple.</h1>
-                <p>Ensure your website is compliant with global privacy regulations without compromising design or user experience.</p>
+                <p>Ensure your website is compliant with global privacy regulations without compromising design or user
+                    experience.</p>
                 <div class="hero-actions">
                     <a href="#" class="btn-primary">Start Free Trial</a>
                     <a href="#" class="btn-secondary">View Demo</a>
@@ -53,7 +65,8 @@
                 <div class="grid">
                     <div class="card">
                         <h3>Analytics Dashboard</h3>
-                        <p>Real-time insights into your data usage and user consent preferences tailored for your needs.</p>
+                        <p>Real-time insights into your data usage and user consent preferences tailored for your needs.
+                        </p>
                     </div>
                     <div class="card">
                         <h3>Global Compliance</h3>
@@ -74,4 +87,5 @@
         </div>
     </footer>
 </body>
+
 </html>
