@@ -1,17 +1,645 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
-<iframe src="http://10.1.8.166:8080/admin/PreferenceConsentFormView?key=9qPpLsSdp%2bI%2bULL6w5pTYg%3d%3d" style="width:100%; height:100vh; border:none; margin:0; padding:0;"></iframe>
-<script src="https://cookiebanner.pdpanetka.com/nksAutoBlock.min.js"></script>
-<script>
-  fetch("https://qasilver.pdpanetka.com/api/cookie/cookiesetting?key=Mdd3cr0tCDfsUpfhJ9pRvA%3d%3d")
-    .then((res) => res.text())
-    .then((html) => {
-      var documentFragment = document.createRange().createContextualFragment(html);
-      document.body.appendChild(documentFragment);
-    })
-    .catch((err) => console.warn('API went wrong.', err));
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACME Co., Ltd. | บริษัท แอคมี จำกัด</title>
+
+  <!-- ================================================================== -->
+  <!-- ===== COOKIE BANNER SCRIPT : START =============================== -->
+  <!-- วาง script ของ Cookie Banner (จากเมนู Deployment) ไว้ระหว่าง START / END -->
+
+
+  <!-- ===== COOKIE BANNER SCRIPT : END ================================= -->
+  <!-- ================================================================== -->
+
+  <style>
+    :root {
+      --primary: #0b4f8a;
+      --primary-dark: #083a66;
+      --accent: #f5a623;
+      --text: #1f2933;
+      --muted: #616e7c;
+      --bg: #ffffff;
+      --bg-alt: #f3f6f9;
+      --border: #dde3ea;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Sarabun", "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: var(--primary-dark);
+      color: #cfe0ef;
+      font-size: 13px;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 6px 16px;
+      flex-wrap: wrap;
+    }
+
+    .topbar a {
+      color: #fff;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--primary);
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #1f2933;
+    }
+
+    .btn-primary:hover {
+      text-decoration: none;
+      filter: brightness(0.95);
+    }
+
+    .btn-outline {
+      border-color: #fff;
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      text-decoration: none;
+      background: rgba(255, 255, 255, .1);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(120deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      padding: 88px 0;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      max-width: 640px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #d6e6f5;
+      max-width: 600px;
+      margin-bottom: 28px;
+    }
+
+    .hero .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Sections */
+    section {
+      padding: 64px 0;
+    }
+
+    section.alt {
+      background: var(--bg-alt);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      color: var(--primary-dark);
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .card .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: #e6f0fa;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .stats {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      text-align: center;
+    }
+
+    .stats strong {
+      display: block;
+      font-size: 36px;
+      color: var(--primary);
+    }
+
+    .stats span {
+      color: var(--muted);
+    }
+
+    /* News */
+    .news-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-thumb {
+      height: 150px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #c9dcef, #e9f1f9);
+      margin-bottom: 14px;
+    }
+
+    .news-date {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Contact form */
+    form {
+      display: grid;
+      gap: 14px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer */
+    footer {
+      background: #102a43;
+      color: #bcccdc;
+      padding: 48px 0 0;
+      font-size: 14px;
+    }
+
+    footer h4 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 6px;
+    }
+
+    footer a {
+      color: #bcccdc;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #243b53;
+      margin-top: 36px;
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-bottom .links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+
+      nav,
+      header .btn {
+        display: none;
+      }
+
+      .hero {
+        padding: 56px 0;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- ===== THEME (LIGHT / DARK) : START ===== -->
+  <!-- สลับธีมหน้าเว็บได้ด้วยปุ่มบน topbar หรือ URL ?theme=light / ?theme=dark (จำค่าล่าสุดไว้ใน localStorage) -->
+  <!-- selector จำกัดเฉพาะ .topbar / header / main / footer เพื่อไม่ให้กระทบสไตล์ของ Cookie Banner -->
+  <script>
+    (function () {
+      var theme = "light";
+      try {
+        var fromUrl = new URLSearchParams(location.search).get("theme");
+        theme = fromUrl || localStorage.getItem("acme_mockup_theme") || "light";
+      } catch (e) {}
+      document.documentElement.setAttribute("data-theme", theme === "dark" ? "dark" : "light");
+    })();
+  </script>
+  <style id="theme-dark">
+    html[data-theme="dark"], html[data-theme="dark"] body { background: #0f1115; }
+
+    html[data-theme="dark"] .topbar { background: #000; color: #9aa3ad; }
+    html[data-theme="dark"] .topbar a { color: #e6e9ed; }
+
+    html[data-theme="dark"] header { background: #16191f; border-bottom-color: #2a2f37; }
+    html[data-theme="dark"] header .logo { color: #f5a623; }
+    html[data-theme="dark"] header .logo-mark { background: #f5a623; color: #16191f; }
+    html[data-theme="dark"] header nav a { color: #d5dae0; }
+
+    html[data-theme="dark"] main { color: #d5dae0; }
+    html[data-theme="dark"] main .hero { background: linear-gradient(120deg, #0b0d11, #1d222a); }
+    html[data-theme="dark"] main .hero p { color: #a8b1bb; }
+
+    html[data-theme="dark"] main section { background: #0f1115; }
+    html[data-theme="dark"] main section.alt { background: #16191f; }
+    html[data-theme="dark"] main .section-title h2 { color: #f5f6f7; }
+    html[data-theme="dark"] main .section-title p,
+    html[data-theme="dark"] main .card p,
+    html[data-theme="dark"] main .news-date,
+    html[data-theme="dark"] main .stats span { color: #9aa3ad; }
+    html[data-theme="dark"] main .stats strong { color: #f5a623; }
+
+    html[data-theme="dark"] main .card { background: #1d222a; border-color: #2a2f37; }
+    html[data-theme="dark"] main .card h3 { color: #f5f6f7; }
+    html[data-theme="dark"] main .card .icon { background: #2a2f37; }
+    html[data-theme="dark"] main .news-thumb { background: linear-gradient(135deg, #2a2f37, #3a414c); }
+
+    html[data-theme="dark"] main form label { color: #d5dae0; }
+    html[data-theme="dark"] main form input,
+    html[data-theme="dark"] main form textarea,
+    html[data-theme="dark"] main form select { background: #1d222a; border-color: #3a414c; color: #f5f6f7; }
+
+    html[data-theme="dark"] footer { background: #000; color: #9aa3ad; }
+    html[data-theme="dark"] footer a { color: #9aa3ad; }
+    html[data-theme="dark"] footer .footer-bottom { border-top-color: #22262d; }
+
+    /* ปุ่มสลับธีม */
+    .theme-toggle {
+      background: transparent; border: 1px solid rgba(255, 255, 255, .4); color: #fff;
+      border-radius: 999px; padding: 1px 10px; margin-left: 12px; cursor: pointer;
+      font-family: inherit; font-size: 12px;
+    }
+    .theme-toggle:hover { background: rgba(255, 255, 255, .12); }
+  </style>
+  <!-- ===== THEME (LIGHT / DARK) : END ===== -->
+</head>
+
 <body>
-<h1>hi</h1>
+
+  <div class="topbar">
+    <div class="container">
+      <span>📞 02-000-0000 &nbsp;|&nbsp; ✉ contact@acme.co.th</span>
+      <span>
+        <a href="#">TH</a> / <a href="#">EN</a>
+        <button type="button" class="theme-toggle" id="themeToggle"></button>
+      </span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <a href="#" class="logo"><span class="logo-mark">A</span> ACME</a>
+      <nav>
+        <ul>
+          <li><a href="#home">หน้าแรก</a></li>
+          <li><a href="#services">บริการ</a></li>
+          <li><a href="#about">เกี่ยวกับเรา</a></li>
+          <li><a href="#news">ข่าวสาร</a></li>
+          <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-primary">ขอใบเสนอราคา</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero" id="home">
+      <div class="container">
+        <h1>มั่นใจทุกการเดินทาง ด้วยบริการที่ดูแลคุณครบวงจร</h1>
+        <p>ACME พร้อมให้บริการด้วยทีมงานมืออาชีพและเครือข่ายทั่วประเทศ ตลอด 24 ชั่วโมง</p>
+        <div class="actions">
+          <a href="#services" class="btn btn-primary">ดูบริการของเรา</a>
+          <a href="#contact" class="btn btn-outline">ติดต่อเจ้าหน้าที่</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>บริการของเรา</h2>
+          <p>เลือกบริการที่เหมาะกับคุณ</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="icon">🚗</div>
+            <h3>บริการรถยนต์</h3>
+            <p>ดูแลรถของคุณครบทุกด้าน พร้อมบริการช่วยเหลือฉุกเฉินตลอด 24 ชั่วโมง</p>
+          </div>
+          <div class="card">
+            <div class="icon">🏠</div>
+            <h3>บริการที่อยู่อาศัย</h3>
+            <p>คุ้มครองบ้านและทรัพย์สินของคุณจากเหตุไม่คาดฝัน</p>
+          </div>
+          <div class="card">
+            <div class="icon">✈️</div>
+            <h3>บริการการเดินทาง</h3>
+            <p>เดินทางอย่างอุ่นใจทั้งในและต่างประเทศ</p>
+          </div>
+          <div class="card">
+            <div class="icon">🩺</div>
+            <h3>บริการสุขภาพ</h3>
+            <p>ดูแลสุขภาพคุณและครอบครัวด้วยเครือข่ายโรงพยาบาลคู่สัญญา</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>เกี่ยวกับ ACME</h2>
+          <p>ประสบการณ์กว่า 30 ปีที่ลูกค้าไว้วางใจ</p>
+        </div>
+        <div class="stats">
+          <div><strong>30+</strong><span>ปีแห่งประสบการณ์</span></div>
+          <div><strong>2 ล้าน+</strong><span>ลูกค้าทั่วประเทศ</span></div>
+          <div><strong>500+</strong><span>สาขาและศูนย์บริการ</span></div>
+          <div><strong>24/7</strong><span>บริการช่วยเหลือ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="container">
+        <div class="section-title">
+          <h2>ข่าวสารและกิจกรรม</h2>
+        </div>
+        <div class="grid">
+          <div class="card news-item">
+            <div class="news-thumb"></div><span class="news-date">10 ต.ค. 2569</span>
+            <h3>ACME เปิดตัวแอปพลิเคชันใหม่</h3>
+            <p>จัดการบริการได้ง่ายขึ้นผ่านมือถือ</p>
+          </div>
+          <div class="card news-item">
+            <div class="news-thumb"></div><span class="news-date">1 ต.ค. 2569</span>
+            <h3>โปรโมชันพิเศษช่วงปลายปี</h3>
+            <p>รับส่วนลดสูงสุด 20% สำหรับลูกค้าใหม่</p>
+          </div>
+          <div class="card news-item">
+            <div class="news-thumb"></div><span class="news-date">20 ก.ย. 2569</span>
+            <h3>กิจกรรม CSR ปลูกป่าชายเลน</h3>
+            <p>ร่วมสร้างสิ่งแวดล้อมที่ยั่งยืน</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>ติดต่อเรา</h2>
+          <p>กรอกข้อมูลเพื่อให้เจ้าหน้าที่ติดต่อกลับ</p>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('ส่งข้อมูลเรียบร้อย (mockup)');">
+          <div class="form-row">
+            <div><label for="fname">ชื่อ</label><input id="fname" type="text" placeholder="ชื่อ"></div>
+            <div><label for="lname">นามสกุล</label><input id="lname" type="text" placeholder="นามสกุล"></div>
+          </div>
+          <div class="form-row">
+            <div><label for="email">อีเมล</label><input id="email" type="email" placeholder="example@email.com"></div>
+            <div><label for="phone">เบอร์โทรศัพท์</label><input id="phone" type="tel" placeholder="08x-xxx-xxxx"></div>
+          </div>
+          <div><label for="service">บริการที่สนใจ</label>
+            <select id="service">
+              <option>บริการรถยนต์</option>
+              <option>บริการที่อยู่อาศัย</option>
+              <option>บริการการเดินทาง</option>
+              <option>บริการสุขภาพ</option>
+            </select>
+          </div>
+          <div><label for="msg">ข้อความ</label><textarea id="msg" rows="4"></textarea></div>
+          <button class="btn btn-primary" type="submit">ส่งข้อมูล</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>บริษัท แอคมี จำกัด</h4>
+          <p>123 ถนนตัวอย่าง แขวงทดสอบ เขตทดสอบ กรุงเทพฯ 10000</p>
+          <p>โทร 02-000-0000</p>
+        </div>
+        <div>
+          <h4>บริการ</h4>
+          <ul>
+            <li><a href="#services">รถยนต์</a></li>
+            <li><a href="#services">ที่อยู่อาศัย</a></li>
+            <li><a href="#services">การเดินทาง</a></li>
+            <li><a href="#services">สุขภาพ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>บริษัท</h4>
+          <ul>
+            <li><a href="#about">เกี่ยวกับเรา</a></li>
+            <li><a href="#news">ข่าวสาร</a></li>
+            <li><a href="#contact">ติดต่อเรา</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>ความเป็นส่วนตัว</h4>
+          <ul>
+            <li><a href="#">นโยบายคุกกี้</a></li>
+            <li><a href="#">ประกาศความเป็นส่วนตัว</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ACME Co., Ltd. สงวนลิขสิทธิ์</span>
+        <div class="links">
+          <a href="#">นโยบายคุกกี้</a>
+          <a href="#">ประกาศความเป็นส่วนตัว</a>
+          <a href="#">ข้อกำหนดการใช้งาน</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById("themeToggle");
+      var root = document.documentElement;
+      function render() {
+        btn.textContent = root.getAttribute("data-theme") === "dark" ? "☀ Light mode" : "🌙 Dark mode";
+      }
+      btn.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("acme_mockup_theme", next); } catch (e) {}
+        render();
+      });
+      render();
+    })();
+  </script>
+
 </body>
+
+</html>
